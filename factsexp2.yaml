@@ -1,0 +1,9 @@
+- name: installing a service with space checking
+  hosts: webserver
+  become: true
+  tasks:
+      - name: install apache
+        apt:
+           - name: apache2
+             state: present
+             when: 

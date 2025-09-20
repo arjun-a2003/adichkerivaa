@@ -1,0 +1,9 @@
+- name: Install Apache2
+  hosts: webserver
+  become: true
+  tasks:
+       - name: user creation
+         user:
+            name: sarath
+            state: present
+            shell: /home/arj

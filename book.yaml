@@ -1,0 +1,7 @@
+- name: Demo playbook using facts
+  hosts: webserver
+  gather_facts: true
+  tasks:
+    - name: show hostname
+      debug:
+        msg: "This system's host is {{ ansible_distribution  }} "

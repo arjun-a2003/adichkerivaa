@@ -1,0 +1,14 @@
+- name: install nginx
+  hosts: webserver
+  become: true
+  tasks:
+    - name: insta nginx
+      apt:
+        name: nginx
+        state: present
+
+   - name: instal apache2
+      service:
+        name: nginx
+        state: started
+        enabled: true
